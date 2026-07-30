@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南榮老紅茶｜NAN RONG TAIWANESE BLACK TEA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sage:#8b9574;
+    --sage-dk:#6d765a;
+    --sage-dker:#565f45;
+    --cream:#f1ecdf;
+    --cream-soft:#f8f5ec;
+    --ink:#28311f;
+    --seal:#a1362a;
+    --gold:#bd9c5c;
+    --charcoal:#33352c;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--sage);
+    color:var(--cream-soft);
+    font-family:'Noto Sans TC', sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--seal); color:var(--cream-soft); }
+
+  .eyebrow{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    letter-spacing:0.32em;
+    font-size:12px;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 5%;
+    background:rgba(139,149,116,0.0);
+    transition:background .4s ease, padding .4s ease, box-shadow .4s ease;
+  }
+  header.scrolled{
+    background:rgba(86,95,69,0.92);
+    backdrop-filter:blur(6px);
+    padding:12px 5%;
+    box-shadow:0 6px 24px rgba(0,0,0,0.18);
+  }
+  .brand-mark{ display:flex; align-items:center; gap:10px; cursor:pointer; }
+  .brand-mark .cn{
+    font-family:'Noto Serif TC', serif; font-weight:900; font-size:22px; color:var(--cream-soft);
+    letter-spacing:0.05em;
+  }
+  .brand-mark .sub{ font-size:9px; letter-spacing:0.2em; color:var(--gold); font-family:'Noto Sans TC'; }
+  nav ul{ display:flex; gap:34px; list-style:none; }
+  nav a{ color:var(--cream-soft); text-decoration:none; font-size:14px; letter-spacing:0.05em; position:relative; padding-bottom:4px;}
+  nav a::after{ content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--gold); transition:width .3s ease;}
+  nav a:hover::after{ width:100%; }
+  .nav-toggle{ display:none; background:none; border:none; color:var(--cream-soft); font-size:24px; cursor:pointer;}
+
+  @media (max-width:860px){
+    nav ul{ position:fixed; top:0; right:-100%; height:100vh; width:72%; background:var(--sage-dker);
+      flex-direction:column; padding:100px 40px; transition:right .4s ease; gap:28px;}
+    nav ul.open{ right:0; }
+    .nav-toggle{ display:block; }
+  }
+
+  section{ position:relative; }
+
+  /* ---------- Mountain divider ---------- */
+  .ridge{ display:block; width:100%; height:auto; }
+  .ridge-wrap{ position:relative; line-height:0; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:140px 20px 40px;
+    position:relative; overflow:hidden;
+  }
+  .hero-leaf{
+    position:absolute; top:8%; left:6%; width:150px; opacity:0.55;
+    animation:sway 7s ease-in-out infinite;
+  }
+  @keyframes sway{ 0%,100%{ transform:rotate(0deg);} 50%{ transform:rotate(4deg);} }
+  .hero .seal-badge{
+    width:96px; height:96px; margin-bottom:26px;
+    animation:breathe 5s ease-in-out infinite;
+  }
+  @keyframes breathe{ 0%,100%{ transform:scale(1);} 50%{ transform:scale(1.05);} }
+  .hero .cn-small{
+    font-family:'Noto Serif TC', serif; font-weight:700; font-size:26px; color:var(--cream-soft);
+    letter-spacing:0.5em; margin-bottom:6px;
+  }
+  .hero h1{
+    font-family:'Noto Serif TC', serif; font-weight:900; font-size:clamp(64px,13vw,150px);
+    color:var(--cream-soft); line-height:1; letter-spacing:0.06em;
+    text-shadow:0 8px 30px rgba(0,0,0,0.15);
+  }
+  .hero .en-title{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:clamp(14px,2vw,20px);
+    letter-spacing:0.42em; margin-top:18px; color:var(--gold);
+  }
+  .hero .tagline{
+    margin-top:34px; font-size:16px; letter-spacing:0.15em; color:var(--cream-soft); opacity:0.9;
+    writing-mode:horizontal-tb;
+  }
+  .hero .cta-row{ margin-top:44px; display:flex; gap:18px; flex-wrap:wrap; justify-content:center; }
+  .btn{
+    font-family:'Noto Sans TC'; font-size:14px; letter-spacing:0.1em; padding:14px 34px;
+    border-radius:2px; text-decoration:none; transition:all .3s ease; border:1px solid var(--cream-soft);
+    color:var(--cream-soft);
+  }
+  .btn.solid{ background:var(--seal); border-color:var(--seal); }
+  .btn.solid:hover{ background:#8c2c21; }
+  .btn.ghost:hover{ background:rgba(255,255,255,0.12); }
+
+  .scroll-cue{
+    position:absolute; bottom:28px; left:50%; transform:translateX(-50%);
+    font-size:11px; letter-spacing:0.3em; color:var(--cream-soft); opacity:0.7;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  .scroll-cue .line{ width:1px; height:34px; background:var(--gold); animation:drop 1.8s ease-in-out infinite; }
+  @keyframes drop{ 0%{ transform:scaleY(0); transform-origin:top;} 50%{ transform:scaleY(1); transform-origin:top;} 51%{transform-origin:bottom;} 100%{ transform:scaleY(0); transform-origin:bottom;} }
+
+  /* ---------- SINCE 1980 STRIP ---------- */
+  .strip{
+    background:var(--cream); color:var(--charcoal); text-align:center;
+    padding:26px 20px; display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap;
+  }
+  .strip .num{ font-family:'Noto Serif TC'; font-weight:700; font-size:20px; letter-spacing:0.15em; color:var(--seal);}
+  .strip .divider-dot{ width:6px; height:6px; border-radius:50%; background:var(--gold);}
+  .strip .txt{ font-size:14px; letter-spacing:0.2em; }
+
+  /* ---------- STORY ---------- */
+  .story{
+    background:var(--cream); color:var(--charcoal);
+    padding:110px 8% 130px; display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;
+  }
+  .story .art{ position:relative; }
+  .story .art svg{ width:100%; height:auto; }
+  .story h2{
+    font-family:'Noto Serif TC'; font-weight:900; font-size:clamp(30px,4vw,46px); color:var(--ink);
+    line-height:1.3; margin-bottom:22px;
+  }
+  .story h2 span{ color:var(--seal); }
+  .story p{ font-size:15.5px; line-height:2; color:#4a4c40; max-width:46ch; }
+  .story p + p{ margin-top:18px; }
+  @media (max-width:900px){ .story{ grid-template-columns:1fr; padding:80px 6% 100px; } }
+
+  /* ---------- FOUR PILLARS ---------- */
+  .pillars{ background:var(--sage-dker); padding:120px 8%; }
+  .pillars .head{ text-align:center; margin-bottom:70px; }
+  .pillars .head h2{
+    font-family:'Noto Serif TC'; font-weight:900; font-size:clamp(28px,4vw,42px); color:var(--cream-soft);
+  }
+  .pillars .head .eyebrow{ display:block; margin-bottom:14px; }
+  .pillar-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+    border-top:1px solid rgba(241,236,223,0.25);
+  }
+  .pillar{
+    padding:44px 26px; text-align:center; border-right:1px solid rgba(241,236,223,0.25);
+    border-bottom:1px solid rgba(241,236,223,0.25);
+    transition:background .35s ease;
+  }
+  .pillar:last-child{ border-right:none; }
+  .pillar:hover{ background:rgba(241,236,223,0.06); }
+  .pillar .icon{ width:46px; height:46px; margin:0 auto 22px; }
+  .pillar .icon svg{ width:100%; height:100%; }
+  .pillar .no{ font-family:'Cormorant Garamond'; font-style:italic; color:var(--gold); font-size:13px; letter-spacing:0.2em; margin-bottom:10px; display:block;}
+  .pillar h3{ font-family:'Noto Serif TC'; font-weight:700; font-size:18px; color:var(--cream-soft); margin-bottom:14px; letter-spacing:0.06em;}
+  .pillar p{ font-size:13px; line-height:1.9; color:rgba(241,236,223,0.78); }
+  @media (max-width:900px){
+    .pillar-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:520px){
+    .pillar-grid{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- GALLERY (cup views) ---------- */
+  .gallery{ background:var(--sage); padding:130px 6% 150px; text-align:center; }
+  .gallery .head h2{ font-family:'Noto Serif TC'; font-weight:900; font-size:clamp(28px,4vw,42px); color:var(--cream-soft); margin-bottom:8px;}
+  .gallery .head .eyebrow{ display:block; margin-bottom:14px; }
+  .cup-row{
+    margin-top:70px; display:grid; grid-template-columns:repeat(3,1fr); gap:50px; align-items:end;
+  }
+  @media (max-width:960px){ .cup-row{ grid-template-columns:1fr; max-width:360px; margin-inline:auto; } }
+  .cup-card{ display:flex; flex-direction:column; align-items:center; }
+  .cup-card .label{ font-size:12px; letter-spacing:0.3em; color:var(--gold); margin-bottom:22px; }
+  .cup{
+    width:220px; height:280px;
+    background:linear-gradient(180deg, var(--cream-soft), var(--cream) 60%);
+    clip-path:polygon(14% 0%, 86% 0%, 100% 100%, 0% 100%);
+    position:relative; box-shadow:0 30px 60px rgba(0,0,0,0.25);
+    display:flex; flex-direction:column; align-items:center; padding-top:26px;
+  }
+  .cup .rim{ position:absolute; top:0; left:0; right:0; height:14px; background:var(--cream-soft); border-radius:50%/6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+  .cup .brand-line{ font-size:6.5px; letter-spacing:0.14em; color:var(--sage-dk); font-family:'Cormorant Garamond'; margin-top:10px;}
+  .cup .cn-word{ font-family:'Noto Serif TC'; font-weight:900; font-size:38px; color:var(--ink); margin-top:20px; line-height:1;}
+  .cup .cn-word.small{ font-size:24px; }
+  .cup .seal{ position:absolute; top:96px; right:34px; width:20px; height:26px; background:var(--seal); border-radius:50% 50% 50% 0; }
+  .cup .mountains{ position:absolute; bottom:0; left:0; right:0; height:38%; opacity:0.55; }
+  .cup .mountains svg{ width:100%; height:100%; }
+  .cup .feature-list{ margin-top:16px; text-align:left; font-size:9px; color:var(--charcoal); line-height:2.1; }
+  .cup .feature-list li{ list-style:none; display:flex; align-items:center; gap:6px; }
+  .cup .feature-list li::before{ content:"○"; font-size:7px; color:var(--gold); }
+  .lid{
+    width:220px; height:220px; border-radius:50%;
+    background:linear-gradient(160deg, var(--cream-soft), var(--cream) 70%);
+    box-shadow:0 30px 60px rgba(0,0,0,0.25); position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .lid .cn-word{ font-family:'Noto Serif TC'; font-weight:900; font-size:30px; color:var(--ink); }
+  .lid .mountains{ position:absolute; bottom:0; left:0; right:0; height:42%; opacity:0.55; }
+  .lid .mountains svg{ width:100%; height:100%; }
+
+  /* ---------- STORE INFO / FOOTER ---------- */
+  .contact{
+    background:var(--cream); color:var(--charcoal); padding:110px 8%;
+    display:grid; grid-template-columns:1.1fr 1fr; gap:70px;
+  }
+  .contact h2{ font-family:'Noto Serif TC'; font-weight:900; font-size:clamp(26px,3.4vw,38px); color:var(--ink); margin-bottom:26px;}
+  .info-row{ display:flex; gap:16px; padding:18px 0; border-bottom:1px solid rgba(40,49,31,0.15);}
+  .info-row .k{ width:88px; flex-shrink:0; font-size:12px; letter-spacing:0.2em; color:var(--seal); }
+  .info-row .v{ font-size:14.5px; line-height:1.9; color:#4a4c40; }
+  .map-frame{ background:var(--sage-dker); border-radius:2px; min-height:280px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;}
+  .map-frame .mountains{ position:absolute; bottom:0; left:0; right:0; height:55%; opacity:0.6;}
+  .map-frame .mountains svg{ width:100%; height:100%; }
+  .map-frame span{ position:relative; z-index:2; font-family:'Cormorant Garamond'; font-style:italic; letter-spacing:0.2em; color:var(--gold); font-size:14px;}
+  @media (max-width:900px){ .contact{ grid-template-columns:1fr; padding:80px 6%; } }
+
+  footer{
+    background:var(--sage-dker); color:rgba(241,236,223,0.7); text-align:center;
+    padding:40px 6% 34px; font-size:12px; letter-spacing:0.1em;
+  }
+  footer .brand-mark{ justify-content:center; margin-bottom:14px; }
+  footer .fine{ margin-top:10px; opacity:0.6; font-size:11px; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="brand-mark" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <div>
+      <div class="cn">南榮老紅茶</div>
+      <div class="sub">NAN RONG TAIWANESE BLACK TEA</div>
+    </div>
+  </div>
+  <nav>
+    <ul id="navList">
+      <li><a href="#story">品牌故事</a></li>
+      <li><a href="#pillars">堅持工法</a></li>
+      <li><a href="#gallery">產品系列</a></li>
+      <li><a href="#contact">門市資訊</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" id="navToggle">☰</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-leaf" viewBox="0 0 100 220" fill="none" stroke="rgba(241,236,223,0.5)" stroke-width="1">
+    <path d="M50 10 C 40 60, 60 90, 50 140 C 40 170, 55 200, 50 215" />
+    <path d="M50 40 C 30 45, 15 55, 8 60" /><path d="M50 40 C 70 45, 85 55, 92 60" />
+    <path d="M50 75 C 30 80, 18 90, 12 96" /><path d="M50 75 C 70 80, 82 90, 88 96" />
+    <path d="M50 110 C 32 114, 22 122, 16 128" /><path d="M50 110 C 68 114, 78 122, 84 128" />
+  </svg>
+
+  <svg class="seal-badge" viewBox="0 0 100 130">
+    <path d="M50 4 C 20 4 4 50 4 78 C 4 108 24 126 50 126 C 76 126 96 108 96 78 C 96 50 80 4 50 4 Z" fill="#a1362a"/>
+    <text x="50" y="70" text-anchor="middle" fill="#f1ecdf" font-family="'Noto Serif TC'" font-weight="700" font-size="22" writing-mode="tb">葉家</text>
+  </svg>
+
+  <div class="cn-small">南榮</div>
+  <h1>老紅茶</h1>
+  <div class="en-title">NAN RONG · TAIWANESE BLACK TEA</div>
+  <div class="tagline">沖泡台灣．原汁原味．的幸福</div>
+
+  <div class="cta-row">
+    <a href="#gallery" class="btn solid">探索產品</a>
+    <a href="#contact" class="btn ghost">尋找門市</a>
+  </div>
+
+  <div class="scroll-cue"><span>SCROLL</span><div class="line"></div></div>
+</section>
+
+<!-- MOUNTAIN DIVIDER -->
+<div class="ridge-wrap" style="background:var(--sage);">
+  <svg class="ridge" viewBox="0 0 1440 160" preserveAspectRatio="none">
+    <path d="M0,120 L120,90 L220,110 L340,60 L460,100 L600,50 L740,95 L860,70 L1000,110 L1140,80 L1260,105 L1440,70 L1440,160 L0,160 Z" fill="#79825f" opacity="0.7"/>
+    <path d="M0,140 L160,115 L300,135 L420,100 L560,130 L700,95 L840,125 L980,105 L1120,132 L1280,110 L1440,130 L1440,160 L0,160 Z" fill="#6d765a"/>
+  </svg>
+</div>
+
+<!-- SINCE 1980 STRIP -->
+<div class="strip">
+  <span class="num">SINCE 1980</span>
+  <span class="divider-dot"></span>
+  <span class="txt">傳承古法．堅持原味</span>
+</div>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="art">
+    <svg viewBox="0 0 400 400">
+      <circle cx="200" cy="200" r="170" fill="none" stroke="#bd9c5c" stroke-width="1"/>
+      <g fill="none" stroke="#28311f" stroke-width="1.4" opacity="0.75">
+        <path d="M200 60 C 160 140, 240 200, 200 320 C 175 360, 210 385, 200 400"/>
+        <path d="M200 100 C 160 108, 130 122, 112 132"/>
+        <path d="M200 100 C 240 108, 270 122, 288 132"/>
+        <path d="M200 150 C 165 158, 140 170, 122 180"/>
+        <path d="M200 150 C 235 158, 260 170, 278 180"/>
+        <path d="M200 200 C 168 208, 146 218, 130 228"/>
+        <path d="M200 200 C 232 208, 254 218, 270 228"/>
+      </g>
+      <path d="M20 330 L70 300 L120 320 L170 270 L220 310 L270 260 L320 300 L380 275" fill="none" stroke="#a1362a" stroke-width="1" opacity="0.35"/>
+    </svg>
+  </div>
+  <div class="copy">
+    <span class="eyebrow" style="color:var(--seal);">OUR STORY</span>
+    <h2 style="margin-top:14px;">四十餘年，<br>只為一杯<span>原味</span>紅茶</h2>
+    <p>南榮老紅茶創立於1980年，從南部一方小小茶行起家，堅持選用台灣在地原生茶葉，遵循古法烘焙、慢火熬煮，讓茶葉本身的香氣與回甘自然展現。</p>
+    <p>葉家三代人守著同一份配方與工序，不追求花俏的調味，只在意每一杯茶湯，是否對得起「原味」二字。</p>
+  </div>
+</section>
+
+<!-- MOUNTAIN DIVIDER 2 -->
+<div class="ridge-wrap" style="background:var(--cream); transform:scaleY(-1);">
+  <svg class="ridge" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path d="M0,60 L180,30 L320,55 L480,15 L640,50 L800,10 L960,45 L1120,20 L1280,50 L1440,25 L1440,100 L0,100 Z" fill="#565f45"/>
+  </svg>
+</div>
+
+<!-- FOUR PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="head">
+    <span class="eyebrow">WHAT WE HOLD ONTO</span>
+    <h2>堅持的四件事</h2>
+  </div>
+  <div class="pillar-grid">
+    <div class="pillar">
+      <span class="no">01</span>
+      <div class="icon"><svg viewBox="0 0 40 40" fill="none" stroke="#f1ecdf" stroke-width="1.4"><path d="M20 6 C 8 10 8 26 20 34 C 32 26 32 10 20 6 Z"/><path d="M20 10 L20 30"/></svg></div>
+      <h3>台灣原生茶</h3>
+      <p>嚴選台灣在地茶葉<br>香氣濃郁，回甘順口</p>
+    </div>
+    <div class="pillar">
+      <span class="no">02</span>
+      <div class="icon"><svg viewBox="0 0 40 40" fill="none" stroke="#f1ecdf" stroke-width="1.4"><path d="M20 6 C 12 18 8 24 8 28 A12 12 0 0 0 32 28 C 32 24 28 18 20 6 Z"/></svg></div>
+      <h3>RO逆滲透</h3>
+      <p>純淨過濾水質<br>保留茶葉最純粹的風味</p>
+    </div>
+    <div class="pillar">
+      <span class="no">03</span>
+      <div class="icon"><svg viewBox="0 0 40 40" fill="none" stroke="#f1ecdf" stroke-width="1.4"><path d="M20 5 L34 12 V28 L20 35 L6 28 V12 Z"/><path d="M6 12 L20 19 L34 12"/><path d="M20 19 V35"/></svg></div>
+      <h3>貳號蔗糖</h3>
+      <p>選用貳號蔗糖<br>甘甜溫潤，不膩口</p>
+    </div>
+    <div class="pillar">
+      <span class="no">04</span>
+      <div class="icon"><svg viewBox="0 0 40 40" fill="none" stroke="#f1ecdf" stroke-width="1.4"><path d="M16 6 H24 V11 L27 15 V33 A2 2 0 0 1 25 35 H15 A2 2 0 0 1 13 33 V15 L16 11 Z"/><path d="M13 22 H27"/></svg></div>
+      <h3>精品鮮乳</h3>
+      <p>嚴選優質鮮乳<br>奶香濃郁，口感滑順</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="head">
+    <span class="eyebrow">PACKAGING</span>
+    <h2>杯身設計</h2>
+  </div>
+
+  <div class="cup-row">
+    <div class="cup-card">
+      <div class="label">杯身正面</div>
+      <div class="cup">
+        <div class="rim"></div>
+        <div class="brand-line">NAN RONG TAIWANESE BLACK TEA</div>
+        <div class="cn-word small">南榮</div>
+        <div class="cn-word">老紅茶</div>
+        <div class="seal"></div>
+        <div class="mountains">
+          <svg viewBox="0 0 220 100" preserveAspectRatio="none"><path d="M0,70 L30,45 L60,65 L90,30 L120,55 L150,20 L180,50 L220,35 L220,100 L0,100 Z" fill="#6d765a"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="cup-card">
+      <div class="label">杯身背面</div>
+      <div class="cup">
+        <div class="rim"></div>
+        <div class="brand-line">NAN RONG TAIWANESE BLACK TEA</div>
+        <ul class="feature-list" style="margin-top:26px;">
+          <li>台灣原生茶</li>
+          <li>RO逆滲透</li>
+          <li>貳號蔗糖</li>
+          <li>精品鮮乳</li>
+        </ul>
+        <div class="brand-line" style="margin-top:14px;">SINCE 1980・傳承古法．堅持原味</div>
+        <div class="mountains">
+          <svg viewBox="0 0 220 100" preserveAspectRatio="none"><path d="M0,60 L30,40 L60,58 L90,25 L120,50 L150,18 L180,45 L220,30 L220,100 L0,100 Z" fill="#6d765a"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="cup-card">
+      <div class="label">杯膜設計</div>
+      <div class="lid">
+        <div class="cn-word">老紅茶</div>
+        <div class="mountains">
+          <svg viewBox="0 0 220 100" preserveAspectRatio="none"><path d="M0,70 L30,48 L60,66 L90,32 L120,58 L150,22 L180,52 L220,38 L220,100 L0,100 Z" fill="#6d765a"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div>
+    <span class="eyebrow" style="color:var(--seal);">VISIT US</span>
+    <h2 style="margin-top:14px;">門市資訊</h2>
+    <div class="info-row"><div class="k">地址</div><div class="v">高雄市．南榮老紅茶 本店<br>（詳細地址請洽門市公告）</div></div>
+    <div class="info-row"><div class="k">營業時間</div><div class="v">每日 10:00－21:00<br>全年無休</div></div>
+    <div class="info-row"><div class="k">電話</div><div class="v">07-XXX-XXXX</div></div>
+    <div class="info-row"><div class="k">品牌</div><div class="v">葉家南榮老紅茶　NAN RONG TAIWANESE BLACK TEA</div></div>
+  </div>
+  <div class="map-frame">
+    <div class="mountains"><svg viewBox="0 0 400 140" preserveAspectRatio="none"><path d="M0,100 L50,60 L100,95 L150,45 L200,85 L250,35 L300,80 L350,55 L400,90 L400,140 L0,140 Z" fill="#79825f"/></svg></div>
+    <span>MAP · 敬請期待</span>
+  </div>
+</section>
+
+<footer>
+  <div class="brand-mark">
+    <div>
+      <div class="cn" style="font-size:18px;">南榮老紅茶</div>
+    </div>
+  </div>
+  <div>NAN RONG TAIWANESE BLACK TEA　SINCE 1980</div>
+  <div class="fine">© 2026 南榮老紅茶．All Rights Reserved.</div>
+</footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+  navToggle.addEventListener('click', () => navList.classList.toggle('open'));
+  navList.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navList.classList.remove('open')));
+</script>
+
+</body>
+</html>
