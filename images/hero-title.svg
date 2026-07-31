@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="470" viewBox="0 0 430 470">
+  <style>
+    .sub{font-family:'Noto Serif TC','KaiTi',serif;fill:#3f4a34;font-weight:600;}
+    .main{font-family:'Noto Serif TC','KaiTi','STKaiti',serif;fill:#3f4a34;font-weight:900;}
+    .en{font-family:'Noto Serif TC',serif;fill:#7c8a6b;font-weight:500;letter-spacing:3px;}
+    .seal{font-family:'Noto Serif TC','KaiTi',serif;fill:#fff;font-weight:700;}
+  </style>
+
+  <!-- 南榮 -->
+  <text x="258" y="96" class="sub" font-size="34" text-anchor="middle">南</text>
+  <text x="258" y="140" class="sub" font-size="34" text-anchor="middle">榮</text>
+
+  <!-- 老紅茶（書法感）-->
+  <text x="158" y="152" class="main" font-size="120" text-anchor="middle">老</text>
+  <text x="158" y="274" class="main" font-size="120" text-anchor="middle">紅</text>
+  <text x="158" y="396" class="main" font-size="120" text-anchor="middle">茶</text>
+
+  <!-- 英文 lockup -->
+  <text x="312" y="212" class="en" font-size="13" text-anchor="middle">NAN RONG</text>
+  <text x="312" y="232" class="en" font-size="13" text-anchor="middle">TAIWANESE</text>
+  <text x="312" y="252" class="en" font-size="13" text-anchor="middle">BLACK TEA</text>
+
+  <!-- 葉家 紅色台灣印章 -->
+  <g transform="translate(238,300)">
+    <path d="M18,2 C27,8 32,20 30,33 C28,46 23,55 15,56 C9,51 6,40 7,28 C8,16 11,7 18,2 Z" fill="#ab3b2d"/>
+    <text x="18" y="26" class="seal" font-size="13" text-anchor="middle">葉</text>
+    <text x="18" y="44" class="seal" font-size="13" text-anchor="middle">家</text>
+  </g>
+</svg>

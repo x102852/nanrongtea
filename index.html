@@ -1,247 +1,173 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>南榮老紅茶｜發現臺灣原汁原味的幸福</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南榮老紅茶 | 發現臺灣原汁原味的幸福</title>
+  <meta name="description" content="南榮老紅茶 - 40年老店，古早味紅茶，堅持傳統工法，嚴選臺灣在地好茶，用心製作精品茶飲。五甲本店位於高雄市鳳山區南榮路15號。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ========== Header ========== -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-sub">南榮</span>
-      <span class="logo-main">老紅茶</span>
-      <span class="logo-badge">茶飲</span>
-    </a>
+  <div id="site-header"></div>
 
-    <nav class="main-nav" id="main-nav">
-      <a href="#top" class="active">首頁</a>
-      <a href="#about">關於我們</a>
-      <a href="#products">茶飲介紹</a>
-      <a href="#news">最新消息</a>
-      <a href="#stores">門市資訊</a>
-      <a href="#contact">聯絡我們</a>
-    </nav>
-
-    <div class="header-icons">
-      <button class="icon-btn" aria-label="會員登入">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" stroke="currentColor" stroke-width="1.5"/><path d="M4 20.5c1.6-3.6 4.8-5.5 8-5.5s6.4 1.9 8 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="購物車">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 12H7L6 8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.5"/></svg>
-      </button>
-      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="開啟選單">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </button>
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="hero-decor">
+      <span class="dot-grid dot-grid--left"></span>
+      <span class="circle-outline"></span>
     </div>
-  </div>
-</header>
 
-<!-- ========== Hero ========== -->
-<section class="hero" id="top">
-  <div class="hero-deco-ring"></div>
-  <div class="hero-deco-dots"></div>
-  <div class="hero-deco-branch">
-    <svg viewBox="0 0 400 500" fill="none">
-      <path d="M50 20 C120 120 90 260 200 340 C260 380 300 430 320 480" stroke="currentColor" stroke-width="1.2" opacity="0.35"/>
-      <ellipse cx="90" cy="90" rx="26" ry="12" transform="rotate(35 90 90)" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-      <ellipse cx="140" cy="180" rx="30" ry="14" transform="rotate(50 140 180)" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-      <ellipse cx="210" cy="270" rx="30" ry="14" transform="rotate(35 210 270)" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-      <ellipse cx="270" cy="350" rx="26" ry="12" transform="rotate(50 270 350)" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-    </svg>
-  </div>
-
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <div class="hero-vertical-labels">
-        <span>的幸福</span>
-        <span>原汁原味</span>
-        <span>發現臺灣</span>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-title">
+          <img src="images/hero-title.svg" alt="南榮 老紅茶 茶飲" class="hero-title-img">
+        </div>
+        <div class="hero-tagline">
+          <span>發現臺灣</span>
+          <span>原汁原味</span>
+          <span>的幸福</span>
+        </div>
+        <a href="products.html" class="btn-explore">
+          探索更多
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
 
-      <div class="hero-title-block">
-        <span class="hero-eyebrow">南榮</span>
-        <h1 class="hero-title">
-          <span>老</span><span>紅</span><span>茶</span>
-        </h1>
-        <span class="hero-badge">茶飲</span>
+      <div class="hero-visual">
+        <div class="visual-circle"></div>
+        <span class="v-dots"></span>
+        <span class="v-arc"></span>
+        <div class="leaf leaf--1"></div>
+        <div class="leaf leaf--2"></div>
+        <div class="product-frame">
+          <img src="images/fp-hongcha.jpg" alt="南榮老紅茶 招牌紅茶" class="product-img">
+          <span class="product-badge">40<small>年</small></span>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <a href="#products" class="btn btn-primary">
-        探索更多
-        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <!-- ===== Features（四大堅持，呼應杯身）===== -->
+  <section class="features">
+    <div class="features-card">
+      <div class="feature">
+        <span class="feature-icon">
+          <svg viewBox="0 0 40 40" width="34" height="34"><path d="M20 8C12 12 9 22 13 32c9-1 15-9 13-20-4 1-8 5-8 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14 31c3-6 8-10 12-12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </span>
+        <div class="feature-text">
+          <h3>台灣原生茶</h3>
+          <p>高山高海拔嚴選</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">
+          <svg viewBox="0 0 40 40" width="34" height="34"><path d="M20 7c6 8 9 12 9 18a9 9 0 0 1-18 0c0-6 3-10 9-18z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 25a4 4 0 0 0 4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </span>
+        <div class="feature-text">
+          <h3>RO 逆滲透</h3>
+          <p>多道過濾淨水</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">
+          <svg viewBox="0 0 40 40" width="34" height="34"><path d="M20 8l10 5v14l-10 5-10-5V13z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 13l10 5 10-5M20 18v14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="feature-text">
+          <h3>貳號蔗糖</h3>
+          <p>台糖親熬蔗糖</p>
+        </div>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">
+          <svg viewBox="0 0 40 40" width="34" height="34"><path d="M17 8h6v3l3 4v17a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2V15l3-4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 20h12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </span>
+        <div class="feature-text">
+          <h3>精品鮮乳</h3>
+          <p>高大牧場鮮乳</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 人氣精選（兩大平台整合）===== -->
+  <section class="ranking">
+    <div class="section-head">
+      <span class="section-eyebrow">Best Sellers</span>
+      <h2 class="section-title center">人氣精選 <span class="title-leaf"></span></h2>
+      <p class="section-desc">最多人喜愛的熱門人氣飲品</p>
+    </div>
+    <div class="pop-grid">
+      <div class="pop-card"><div class="pop-img"><img src="images/fp-milktea.jpg" alt="南榮鮮奶茶"><span class="pop-tag">人氣</span></div><h3>南榮鮮奶茶</h3><p>絲滑濃醇</p></div>
+      <div class="pop-card"><div class="pop-img"><img src="images/fp-coffee.jpg" alt="咖啡牛奶"><span class="pop-tag">人氣</span></div><h3>咖啡牛奶</h3><p>香醇平衡</p></div>
+      <div class="pop-card"><div class="pop-img"><img src="images/fp-yakult.jpg" alt="養樂多綠茶"><span class="pop-tag">人氣</span></div><h3>養樂多綠茶</h3><p>酸甜清爽</p></div>
+      <div class="pop-card"><div class="pop-img"><img src="images/fp-puer.jpg" alt="益壽普洱茶"><span class="pop-tag">人氣</span></div><h3>益壽普洱茶</h3><p>回甘順口</p></div>
+    </div>
+    <div class="section-cta">
+      <a href="recommend.html" class="btn-explore btn-explore--sm">看更多推薦
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
+  </section>
 
-    <div class="hero-visual">
-      <div class="hero-blob"></div>
-      <div class="hero-blob-inner"></div>
-      <img class="hero-cup" src="images/cup-placeholder.svg" alt="南榮老紅茶紙杯" />
-      <div class="hero-leaf-scoop">
-        <svg viewBox="0 0 80 80" fill="none"><path d="M10 40 Q40 20 70 30 L60 55 Q35 60 10 40Z" stroke="currentColor" stroke-width="1.4"/></svg>
+  <!-- ===== About / 品牌故事 (teaser) ===== -->
+  <section class="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <span class="about-eyebrow">關於南榮 <span class="title-leaf"></span></span>
+        <h2 class="section-title">品質五星 <span class="star">★</span> 價格貼心</h2>
+        <p>我們以傳統精神結合創新理念，嚴選上等茶葉與天然蔗糖，絕不添加人工香料，為您打造最純粹的古早風味茶飲。</p>
+        <p>堅持使用高品質原料，採用電解水淨水設備，確保每一杯茶都新鮮、安心、平價且精緻。</p>
+        <p>南榮老紅茶，讓好茶更有價值，帶來奢華卻親民的品味享受。</p>
+        <ul class="about-services">
+          <li><span>線上點餐</span>Uber Eats、Foodpanda</li>
+          <li><span>行動支付</span>LINE Pay、TWQR、全支付、街口支付</li>
+        </ul>
+        <a href="about.html" class="btn-explore btn-explore--sm">
+          認識我們
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="about-media">
+        <img src="images/store-front.jpg" alt="南榮老紅茶 五甲本店門市">
+        <span class="about-badge">自然 · 原味 · 純粹</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ========== Feature strip ========== -->
-<section class="features">
-  <div class="container features-grid">
-    <div class="feature-item">
-      <span class="feature-icon">
-        <svg viewBox="0 0 40 40" fill="none"><path d="M20 6C10 10 8 22 14 30c4 5 12 6 18 2-2-10-4-20-12-26Z" stroke="currentColor" stroke-width="1.4"/><path d="M18 12c4 4 5 12 3 20" stroke="currentColor" stroke-width="1.2"/></svg>
-      </span>
-      <div>
-        <p class="feature-title">古早味紅茶</p>
-        <p class="feature-sub">40年老店</p>
+  <!-- ===== 門市資訊 / 聯絡我們 (teaser) ===== -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="contact-map">
+        <iframe
+          title="南榮老紅茶 五甲本店地圖"
+          src="https://www.google.com/maps?q=高雄市鳳山區南榮路15號&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <span class="feature-dots">‧‧‧‧‧</span>
-    </div>
-
-    <div class="feature-item">
-      <span class="feature-icon">
-        <svg viewBox="0 0 40 40" fill="none"><path d="M20 6c6 9 11 16 11 22a11 11 0 1 1-22 0c0-6 5-13 11-22Z" stroke="currentColor" stroke-width="1.4"/></svg>
-      </span>
-      <div>
-        <p class="feature-title">原汁原味</p>
-        <p class="feature-sub">堅持傳統工法</p>
-      </div>
-      <span class="feature-dots">‧‧‧‧‧</span>
-    </div>
-
-    <div class="feature-item">
-      <span class="feature-icon">
-        <svg viewBox="0 0 40 40" fill="none"><path d="M4 30 14 14l6 9 4-6 12 13H4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-      </span>
-      <div>
-        <p class="feature-title">臺灣茶葉</p>
-        <p class="feature-sub">嚴選在地好茶</p>
-      </div>
-      <span class="feature-dots">‧‧‧‧‧</span>
-    </div>
-
-    <div class="feature-item">
-      <span class="feature-icon">
-        <svg viewBox="0 0 40 40" fill="none"><path d="M13 15h14l-2 18a2 2 0 0 1-2 2H17a2 2 0 0 1-2-2l-2-18Z" stroke="currentColor" stroke-width="1.4"/><path d="M11 15h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M16 15c0-3 1.8-5 4-5s4 2 4 5" stroke="currentColor" stroke-width="1.4"/></svg>
-      </span>
-      <div>
-        <p class="feature-title">精品茶飲</p>
-        <p class="feature-sub">用心・安心・放心</p>
-      </div>
-      <span class="feature-dots">‧‧‧‧‧</span>
-    </div>
-  </div>
-</section>
-
-<!-- ========== News + Banner ========== -->
-<section class="news-section" id="news">
-  <div class="container news-grid">
-
-    <div class="news-panel">
-      <div class="news-header">
-        <span>最新消息</span>
-        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M4 12c4-6 12-6 16 0M4 12c4 6 12 6 16 0" stroke="currentColor" stroke-width="1.3"/></svg>
-      </div>
-
-      <ul class="news-list">
-        <li>
-          <span class="tag tag-event">活動</span>
-          <span class="news-text">夏日消暑優惠｜指定飲品第二杯半價</span>
-          <span class="news-date">2024.06.01</span>
-        </li>
-        <li>
-          <span class="tag tag-new">新品</span>
-          <span class="news-text">新品上市｜焙香烏龍鮮奶茶</span>
-          <span class="news-date">2024.05.20</span>
-        </li>
-        <li>
-          <span class="tag tag-promo">優惠</span>
-          <span class="news-text">會員專屬｜生日當月飲品 8 折</span>
-          <span class="news-date">2024.05.15</span>
-        </li>
-        <li>
-          <span class="tag tag-notice">公告</span>
-          <span class="news-text">端午節營業時間調整公告</span>
-          <span class="news-date">2024.05.10</span>
-        </li>
-      </ul>
-
-      <a href="#news" class="link-more">
-        查看更多
-        <svg viewBox="0 0 24 24" fill="none" width="16" height="16"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
-
-    <div class="news-banner">
-      <div class="news-banner-deco"></div>
-      <p class="banner-en">Natural / Original / Authentic</p>
-      <p class="banner-zh">自然・原味・純粹</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ========== About ========== -->
-<section class="about" id="about">
-  <div class="container about-inner">
-    <h2 class="section-title">關於我們</h2>
-    <p class="section-text">
-      南榮老紅茶創立至今超過40年，秉持「發現臺灣原汁原味的幸福」的初心，
-      堅持選用臺灣在地優質茶葉，以傳統工法慢火烘焙、細心沖泡，
-      將這份古早味的溫暖，傳遞給每一位顧客。
-    </p>
-  </div>
-</section>
-
-<!-- ========== Products ========== -->
-<section class="products" id="products">
-  <div class="container">
-    <h2 class="section-title">茶飲介紹</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-thumb"></div>
-        <p class="product-name">古早味紅茶</p>
-      </div>
-      <div class="product-card">
-        <div class="product-thumb"></div>
-        <p class="product-name">焙香烏龍鮮奶茶</p>
-      </div>
-      <div class="product-card">
-        <div class="product-thumb"></div>
-        <p class="product-name">四季青茶</p>
-      </div>
-      <div class="product-card">
-        <div class="product-thumb"></div>
-        <p class="product-name">冬瓜檸檬</p>
+      <div class="contact-info">
+        <h2 class="section-title">五甲本店 <span class="title-leaf"></span></h2>
+        <ul class="contact-list">
+          <li><span>電話</span><a href="tel:0772766​21">07-7276621</a></li>
+          <li><span>地址</span>83084 高雄市鳳山區南榮路 15 號</li>
+          <li><span>信箱</span><a href="mailto:x1028@ms52.url.com.tw">x1028@ms52.url.com.tw</a></li>
+          <li><span>營業時間</span>09:00 ～ 00:00</li>
+        </ul>
+        <div class="contact-social">
+          <a href="https://www.facebook.com/profile.php?id=61574625446759" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn"><svg viewBox="0 0 24 24" width="20" height="20"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Instagram" class="social-btn"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a>
+          <a href="mailto:x1028@ms52.url.com.tw" aria-label="Email" class="social-btn"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="4" y="6" width="16" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 8l7 5 7-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <a href="contact.html" class="line-btn">前往聯絡我們</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ========== Stores ========== -->
-<section class="stores" id="stores">
-  <div class="container">
-    <h2 class="section-title">門市資訊</h2>
-    <p class="section-text">請洽詢各分店電話與營業時間，我們期待您的光臨。</p>
-  </div>
-</section>
+  <div id="site-footer"></div>
 
-<!-- ========== Footer / Contact ========== -->
-<footer class="site-footer" id="contact">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <span class="logo-sub">南榮</span>
-      <span class="logo-main small">老紅茶</span>
-    </div>
-    <p class="footer-copy">© 2026 南榮老紅茶 All Rights Reserved.</p>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

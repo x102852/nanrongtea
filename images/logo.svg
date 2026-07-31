@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="214" height="64" viewBox="0 0 214 64">
+  <style>
+    .brand{font-family:'Noto Serif TC','KaiTi',serif;fill:#3f4a34;font-weight:600;}
+    .title{font-family:'Noto Serif TC','KaiTi','STKaiti',serif;fill:#3f4a34;font-weight:900;}
+    .seal{font-family:'Noto Serif TC','KaiTi',serif;fill:#fff;font-weight:700;}
+  </style>
+  <text x="4" y="42" class="brand" font-size="18" letter-spacing="7">南 榮</text>
+  <text x="64" y="48" class="title" font-size="40" letter-spacing="2">老紅茶</text>
+  <g transform="translate(190,13)">
+    <path d="M12,1 C18,5 22,14 20,23 C18,32 15,38 10,39 C6,35 4,27 5,19 C6,11 8,4 12,1 Z" fill="#ab3b2d"/>
+    <text x="12" y="17" class="seal" font-size="9" text-anchor="middle">葉</text>
+    <text x="12" y="30" class="seal" font-size="9" text-anchor="middle">家</text>
+  </g>
+</svg>

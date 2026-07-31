@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240" width="1440" height="240" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="m-far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c7d0bb"/><stop offset="1" stop-color="#b7c2a8"/>
+    </linearGradient>
+    <linearGradient id="m-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fac8a"/><stop offset="1" stop-color="#8b9a75"/>
+    </linearGradient>
+    <linearGradient id="m-near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#78855f"/><stop offset="1" stop-color="#657155"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 遠山 -->
+  <path fill="url(#m-far)" d="M0,120 C120,72 250,62 360,98 C470,132 560,74 700,92 C840,110 940,64 1080,96 C1200,124 1320,80 1440,104 L1440,240 L0,240 Z"/>
+  <!-- 遠山松樹 -->
+  <g stroke="#9aa886" stroke-width="1.4" fill="none" opacity=".7">
+    <path d="M235,92 l0,-16 M229,84 l6,-6 6,6 M231,90 l4,-5 4,5"/>
+    <path d="M760,84 l0,-15 M754,77 l6,-6 6,6 M756,82 l4,-5 4,5"/>
+    <path d="M1145,88 l0,-15 M1139,81 l6,-6 6,6 M1141,86 l4,-5 4,5"/>
+  </g>
+
+  <!-- 中山 -->
+  <path fill="url(#m-mid)" d="M0,158 C160,116 300,146 470,124 C640,102 760,150 940,126 C1120,102 1260,150 1440,128 L1440,240 L0,240 Z"/>
+
+  <!-- 近景茶園梯田 -->
+  <path fill="url(#m-near)" d="M0,186 C220,166 430,188 660,174 C900,160 1120,190 1440,172 L1440,240 L0,240 Z"/>
+  <!-- 梯田等高線 -->
+  <g stroke="#8b976f" stroke-width="1.3" fill="none" opacity=".55">
+    <path d="M0,198 C240,180 460,200 700,187 C960,173 1180,200 1440,184"/>
+    <path d="M0,210 C260,194 480,212 740,200 C1000,188 1200,212 1440,197"/>
+    <path d="M0,222 C260,208 500,224 760,214 C1020,204 1220,224 1440,210"/>
+  </g>
+  <!-- 近景松樹 -->
+  <g stroke="#5c6a49" stroke-width="1.6" fill="none" opacity=".8">
+    <path d="M120,176 l0,-20 M112,167 l8,-8 8,8 M114,174 l6,-7 6,7"/>
+    <path d="M1000,180 l0,-19 M992,171 l8,-8 8,8 M994,178 l6,-7 6,7"/>
+  </g>
+</svg>
