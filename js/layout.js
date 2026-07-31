@@ -21,7 +21,7 @@
     '<header class="site-header" id="header">' +
       '<div class="header-inner">' +
         '<a href="index.html" class="logo" aria-label="南榮老紅茶">' +
-          '<img src="images/logo.svg" alt="南榮老紅茶" class="logo-img">' +
+          '<img src="images/logo-h.png" alt="南榮老紅茶" class="logo-img">' +
         '</a>' +
         '<nav class="main-nav" id="mainNav">' + navHtml + '</nav>' +
         '<div class="header-icons">' +
@@ -34,7 +34,7 @@
     '<footer class="site-footer">' +
       '<div class="footer-inner">' +
         '<div class="footer-brand">' +
-          '<span class="footer-logo">南 榮 老紅茶<span class="footer-seal">葉家</span></span>' +
+          '<img src="images/logo-h-white.png" alt="南榮老紅茶" class="footer-logo-img">' +
           '<p>發現臺灣原汁原味的幸福</p>' +
           '<p class="footer-since">SINCE 1980 · 傳承古法 · 堅持原味</p>' +
         '</div>' +
