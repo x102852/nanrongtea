@@ -2,7 +2,7 @@
 (function () {
   const NAV = [
     ['index.html', '首頁'],
-    ['news.html', '常見問題'],
+    ['faq.html', '常見問題'],
     ['products.html', '嚴選商品'],
     ['recommend.html', '強力推薦'],
     ['about.html', '關於我們'],
