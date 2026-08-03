@@ -40,6 +40,7 @@
         '</div>' +
         '<div class="footer-col">' +
           '<h4>快速連結</h4>' +
+          '<a href="faq.html">常見問題</a>' +
           '<a href="products.html">嚴選商品</a>' +
           '<a href="recommend.html">強力推薦</a>' +
           '<a href="about.html">關於我們</a>' +
