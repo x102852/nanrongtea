@@ -454,8 +454,10 @@ a.rec-card{display:block;color:inherit;}
 /* ===== About page ===== */
 .about-page{padding:70px 40px 90px;background:var(--cream);}
 .ap-inner{max-width:820px;margin:0 auto;}
-.ap-logo{text-align:center;margin-bottom:34px;}
-.ap-logo img{width:200px;max-width:60%;height:auto;display:inline-block;}
+.ap-logo{text-align:center;margin-bottom:40px;}
+.ap-logo img{width:380px;max-width:84%;height:auto;display:inline-block;}
+.ap-slogan{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--green-deep);margin-top:22px;letter-spacing:3px;}
+.ap-en{font-family:var(--serif);font-size:16px;letter-spacing:2px;color:var(--text-soft);margin-top:8px;}
 .ap-lead{font-size:18px;color:var(--text);line-height:2;text-align:center;margin-bottom:46px;letter-spacing:.5px;}
 .ap-block{margin-bottom:34px;padding-left:22px;border-left:4px solid var(--sage);}
 .ap-block h2{font-family:var(--serif);font-size:24px;color:var(--green-deep);font-weight:700;letter-spacing:1px;margin-bottom:12px;}
