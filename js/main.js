@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const data = new FormData(form);
-      const name = ((data.get('first') || '') + ' ' + (data.get('last') || '')).trim();
+      const name = (data.get('name') || '').trim();
       const email = data.get('email') || '';
       const message = data.get('message') || '';
       const subject = encodeURIComponent('【網站來信】' + name);

@@ -53,7 +53,7 @@
           '<p>營業時間：09:00 ～ 00:00</p>' +
         '</div>' +
       '</div>' +
-      '<div class="footer-bottom"><p>© 2024 南榮老紅茶 NANRONG BLACK TEA. All Rights Reserved.</p></div>' +
+      '<div class="footer-bottom"><p>© 2026 南榮老紅茶 NANRONG BLACK TEA. All Rights Reserved.</p></div>' +
     '</footer>';
 
   const h = document.getElementById('site-header');
