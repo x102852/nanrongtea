@@ -35,7 +35,7 @@
       '<div class="footer-inner">' +
         '<div class="footer-brand">' +
           '<img src="images/logo-h-white.png" alt="南榮老紅茶" class="footer-logo-img">' +
-          '<p>發現臺灣原汁原味的幸福</p>' +
+          '<p>發現台灣原汁原味的幸福</p>' +
           '<p class="footer-since">SINCE 1980 · 傳承古法 · 堅持原味</p>' +
         '</div>' +
         '<div class="footer-col">' +
