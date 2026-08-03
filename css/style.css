@@ -418,7 +418,14 @@ a.rec-card{display:block;color:inherit;}
 /* ===== Gallery ===== */
 .gallery{padding:80px 40px;background:var(--cream);}
 .gallery-grid{max-width:var(--content);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-.gallery-item{aspect-ratio:1/1;overflow:hidden;border-radius:14px;box-shadow:0 10px 26px rgba(61,74,53,.1);}
+.gallery-item{position:relative;aspect-ratio:1/1;overflow:hidden;border-radius:14px;box-shadow:0 10px 26px rgba(61,74,53,.1);}
+.gallery-caption{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;pointer-events:none;
+  padding:30px 14px 14px;text-align:center;
+  font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:1.5px;color:#fff;
+  background:linear-gradient(to top,rgba(45,52,38,.72) 0%,rgba(45,52,38,.35) 55%,rgba(45,52,38,0) 100%);
+  text-shadow:0 1px 3px rgba(0,0,0,.35);
+}
 .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
 .gallery-item:hover img{transform:scale(1.08);}
 
