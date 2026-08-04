@@ -87,7 +87,7 @@ img{max-width:100%;display:block;}
   padding:clamp(150px,20vh,240px) 40px 96px;overflow:hidden;background-color:#eef0e8;
   background-image:
     linear-gradient(100deg,rgba(245,246,240,.72) 0%,rgba(245,246,240,.3) 24%,rgba(245,246,240,0) 46%),
-    url(../images/hero-keyvisual.png);
+    url(../images/hero-keyvisual.jpg);
   background-repeat:no-repeat,no-repeat;
   background-position:center,center right;
   background-size:cover,cover;
@@ -533,8 +533,14 @@ a.rec-card{display:block;color:inherit;}
 .btn-outline:hover{background:var(--sage);color:#fff;}
 
 /* ===== FAQ ===== */
-.faq{padding:70px 40px;background:var(--cream);}
-.faq-inner{max-width:var(--content);margin:0 auto;}
+.faq{position:relative;overflow:hidden;padding:70px 40px;background:var(--cream);}
+.faq-inner{position:relative;z-index:1;max-width:var(--content);margin:0 auto;}
+/* 角落茶枝裝飾：留白呼吸感，不搶內容 */
+.faq-decor{
+  position:absolute;z-index:0;right:-26px;bottom:-40px;
+  width:210px;height:auto;color:var(--sage);opacity:.15;
+  pointer-events:none;user-select:none;
+}
 .faq-item{
   background:#faf9f2;border-radius:14px;margin-bottom:16px;overflow:hidden;
   box-shadow:0 8px 22px rgba(61,74,53,.07);border:1px solid rgba(169,183,154,.3);
@@ -553,7 +559,7 @@ a.rec-card{display:block;color:inherit;}
 .faq-item[open] summary::after{transform:translateY(-30%) rotate(-135deg);}
 .faq-a{padding:0 26px 24px;font-size:15.5px;color:var(--text-soft);line-height:1.9;}
 .faq-a a{color:var(--green-mid);}
-.faq-cta{max-width:var(--content);margin:40px auto 0;text-align:center;}
+.faq-cta{position:relative;z-index:1;max-width:var(--content);margin:40px auto 0;text-align:center;}
 .faq-cta p{font-size:16px;color:var(--text-soft);margin-bottom:20px;}
 .faq-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 
@@ -584,7 +590,7 @@ a.rec-card{display:block;color:inherit;}
     min-height:auto;padding:120px 20px 80px;
     background-image:
       linear-gradient(180deg,rgba(245,246,240,.82) 0%,rgba(245,246,240,.4) 40%,rgba(245,246,240,.7) 100%),
-      url(../images/hero-keyvisual.png);
+      url(../images/hero-keyvisual.jpg);
     background-position:center,center right;background-size:cover,cover;
   }
   .hero-copy{padding-left:0;max-width:100%;text-align:center;}
@@ -608,6 +614,7 @@ a.rec-card{display:block;color:inherit;}
   .banner-title{font-size:38px;}
 }
 @media(max-width:520px){
+  .faq-decor{display:none;}
   .features-card{grid-template-columns:1fr;}
   .feature:not(:last-child)::after{display:none;}
   .feature{border-bottom:1px solid var(--cream-2);padding-bottom:16px;}
