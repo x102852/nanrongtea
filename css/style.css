@@ -488,8 +488,7 @@ a.rec-card{display:block;color:inherit;}
 .ap-photo img{width:100%;display:block;}
 
 /* ===== 品牌歷程 時間軸 ===== */
-.story{padding:84px 40px 96px;background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%);}
-.story-inner{max-width:var(--content);margin:0 auto;}
+.ap-story{margin:8px 0 46px;}
 .timeline{max-width:var(--content);margin:0 auto;list-style:none;position:relative;}
 .timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--sage-soft);}
 .tl-item{position:relative;padding:0 0 38px 44px;}
