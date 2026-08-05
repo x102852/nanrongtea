@@ -318,6 +318,15 @@ img{max-width:100%;display:block;}
 .footer-logo-img{height:60px;width:auto;max-width:100%;display:block;}
 .footer-brand p{margin-top:14px;font-size:15px;color:var(--sage-light);letter-spacing:1px;}
 .footer-since{margin-top:8px !important;font-size:12.5px !important;color:var(--gold-soft) !important;letter-spacing:2px !important;}
+.footer-social{display:flex;justify-content:space-between;gap:12px;margin-top:22px;width:252px;max-width:100%;}
+.footer-social a{
+  width:48px;height:48px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.1);color:#d7ddca;
+  transition:background .25s,color .25s,transform .25s;
+}
+.footer-social a:hover{background:var(--gold);color:#fff;transform:translateY(-3px);}
+.footer-social svg{width:23px;height:23px;}
 .footer-col h4{font-family:var(--serif);font-size:18px;color:#fff;margin-bottom:16px;letter-spacing:1px;}
 .footer-col a,.footer-col p{display:block;font-size:14px;color:#c3cdb6;margin-bottom:10px;transition:color .2s;}
 .footer-col a:hover{color:#fff;}
@@ -371,11 +380,11 @@ a.rec-card{display:block;color:inherit;}
 }
 .menu-tab:hover{color:var(--green-deep);border-color:var(--sage);}
 .menu-tab.active{background:var(--green-mid);color:#fff;border-color:var(--green-mid);}
-.menu-panels{max-width:1000px;margin:0 auto;}
+.menu-panels{max-width:var(--content);margin:0 auto;}
 .menu-panel{display:none;}
 .menu-panel.active{display:block;animation:menuFade .35s ease;}
 @keyframes menuFade{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
-.menu-panel .menu-cat{max-width:1000px;margin:0 auto;}
+.menu-panel .menu-cat{max-width:var(--content);margin:0 auto;}
 .menu-two{column-count:2;column-gap:54px;column-rule:1px solid var(--cream-2);}
 .menu-two li{break-inside:avoid;}
 .menu-cat{
@@ -412,7 +421,7 @@ a.rec-card{display:block;color:inherit;}
 
 /* ===== 客製化選項（甜度 / 冰塊）===== */
 .custom-options{padding:56px 40px 60px;background:var(--cream);}
-.co-inner{max-width:1000px;margin:0 auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:26px 32px;}
+.co-inner{max-width:var(--content);margin:0 auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:26px 32px;}
 .co-title{font-family:var(--serif);font-size:20px;color:var(--green-deep);font-weight:700;letter-spacing:2px;margin-bottom:16px;text-align:center;}
 .co-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:13px 0;border-bottom:1px solid var(--cream-2);}
 .co-row:last-of-type{border-bottom:none;}
@@ -717,4 +726,25 @@ a.rec-card{display:block;color:inherit;}
   .prod-card:hover .prod-img img,
   .fl-img:hover img,
   .gallery-item:hover img{transform:none;filter:none;}
+}
+
+/* ===== 回到頂部按鈕 ===== */
+.back-to-top{
+  position:fixed;right:26px;bottom:26px;z-index:90;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--green-mid);color:#fff;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 22px rgba(61,74,53,.28);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .3s ease,transform .3s ease,visibility .3s ease,background .2s ease;
+}
+.back-to-top.show{opacity:1;visibility:visible;transform:none;}
+.back-to-top:hover{background:var(--green-deep);transform:translateY(-3px);}
+@media(max-width:520px){
+  .back-to-top{right:16px;bottom:16px;width:42px;height:42px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .back-to-top{transition:opacity .3s ease,visibility .3s ease;}
+  .back-to-top.show{transform:none;}
+  .back-to-top:hover{transform:none;}
 }

@@ -93,4 +93,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // 7. 回到頂部按鈕
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    const toggleTop = () => backToTop.classList.toggle('show', window.scrollY > 400);
+    window.addEventListener('scroll', toggleTop, { passive: true });
+    toggleTop();
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 });
