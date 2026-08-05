@@ -20,6 +20,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <!-- 結構化資料 / Google 商家 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "南榮老紅茶",
+    "alternateName": "南榮紅茶 五甲本店",
+    "description": "40年老店，古早味紅茶，堅持傳統工法，嚴選台灣在地好茶，用心製作精品茶飲。",
+    "url": "https://www.nanrongtea.com.tw/",
+    "logo": "https://www.nanrongtea.com.tw/images/logo-official.png",
+    "image": "https://www.nanrongtea.com.tw/images/og-cover.jpg",
+    "telephone": "+886-7-727-6621",
+    "email": "x1028@ms52.url.com.tw",
+    "priceRange": "$",
+    "servesCuisine": "茶飲",
+    "foundingDate": "1980",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "南榮路15號",
+      "addressLocality": "鳳山區",
+      "addressRegion": "高雄市",
+      "postalCode": "83084",
+      "addressCountry": "TW"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.5991294,
+      "longitude": 120.3325531
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "00:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61574625446759",
+      "https://www.instagram.com/nan.rong.black.tea/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -113,10 +154,14 @@
           <li><span>線上點餐</span>Uber Eats、Foodpanda</li>
           <li><span>行動支付</span>LINE Pay、TWQR、全支付、街口支付</li>
         </ul>
-        <a href="about.html" class="btn-explore btn-explore--sm">
-          認識我們
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <div class="about-actions">
+          <a href="about.html" class="btn-explore btn-explore--sm">
+            認識我們
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.ubereats.com/tw/store/%E5%8D%97%E6%A6%AE%E7%B4%85%E8%8C%B6-%E4%BA%94%E7%94%B2%E5%BA%97/UmWI0GgfVDGn7xZQJT33sA?diningMode=DELIVERY" target="_blank" rel="noopener" class="order-btn order-btn--ue">Uber Eats 點餐</a>
+          <a href="https://www.foodpanda.com.tw/restaurant/xrpn/nan-rong-lao-hong-cha-feng-shan-nan-rong-dian" target="_blank" rel="noopener" class="order-btn order-btn--fp">foodpanda 點餐</a>
+        </div>
       </div>
       <div class="about-media">
         <img src="images/store-front.jpg" alt="南榮老紅茶 五甲本店門市">

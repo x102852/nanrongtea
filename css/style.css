@@ -272,13 +272,14 @@ img{max-width:100%;display:block;}
   font-size:14px;padding:4px 14px;border-radius:20px;letter-spacing:1px;
 }
 .btn-explore--sm{font-size:16px;padding:12px 28px;}
+.about-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;}
 .about-media{
   position:relative;border-radius:18px;overflow:hidden;
   box-shadow:0 24px 50px rgba(61,74,53,.28);aspect-ratio:4/3;
 }
 .about-media img{width:100%;height:100%;object-fit:cover;display:block;}
 .about-badge{
-  position:absolute;left:20px;bottom:20px;
+  position:absolute;right:20px;top:20px;
   background:rgba(61,74,53,.72);color:#fff;font-family:var(--serif);
   font-size:16px;letter-spacing:4px;padding:8px 18px;border-radius:10px;backdrop-filter:blur(3px);
 }
@@ -337,6 +338,11 @@ a.rec-card{display:block;color:inherit;}
     linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%);
 }
 .banner-inner{position:relative;z-index:2;}
+.breadcrumb{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:9px;font-family:var(--sans);font-size:13px;color:var(--text-soft);margin-bottom:22px;letter-spacing:1px;}
+.breadcrumb a{color:var(--text-soft);transition:color .2s;}
+.breadcrumb a:hover{color:var(--green-deep);}
+.breadcrumb .sep{color:var(--sage);}
+.breadcrumb [aria-current]{color:var(--green-deep);font-weight:500;}
 .banner-eyebrow{
   display:inline-block;font-family:var(--serif);font-size:12px;letter-spacing:4px;
   text-transform:uppercase;color:var(--gold);margin-bottom:10px;
