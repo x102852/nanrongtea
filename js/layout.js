@@ -36,7 +36,7 @@
         '<div class="footer-brand">' +
           '<img src="images/logo-h-white.png" alt="南榮老紅茶" class="footer-logo-img">' +
           '<p>發現台灣原汁原味的幸福</p>' +
-          '<p class="footer-since">SINCE 1980 · 傳承古法 · 堅持原味</p>' +
+          '<p class="footer-since">SINCE 1983 · 傳承古法 · 堅持原味</p>' +
           '<div class="footer-social">' +
             '<a href="https://www.facebook.com/profile.php?id=61574625446759" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z" fill="currentColor"/></svg></a>' +
             '<a href="https://www.instagram.com/nan.rong.black.tea/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a>' +

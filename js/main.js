@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 4. 捲動進場動畫
   const revealTargets = document.querySelectorAll(
     '.features-card, .about-text, .about-media, .contact-map, .contact-info, .hero-copy, .hero-visual, ' +
-    '.pop-card, .fl-item, .gallery-item, .ap-block, .ap-photo, .notes-col, .cp-form-wrap, .cp-info'
+    '.pop-card, .fl-item, .gallery-item, .ap-block, .ap-photo, .notes-col, .cp-form-wrap, .cp-info, .tl-item'
   );
   revealTargets.forEach(el => el.classList.add('reveal'));
 
