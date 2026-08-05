@@ -375,7 +375,7 @@ a.rec-card{display:block;color:inherit;}
 .menu-panel{display:none;}
 .menu-panel.active{display:block;animation:menuFade .35s ease;}
 @keyframes menuFade{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
-.menu-panel .menu-cat{max-width:640px;margin:0 auto;}
+.menu-panel .menu-cat{max-width:1000px;margin:0 auto;}
 .menu-two{column-count:2;column-gap:54px;column-rule:1px solid var(--cream-2);}
 .menu-two li{break-inside:avoid;}
 .menu-cat{
@@ -394,7 +394,7 @@ a.rec-card{display:block;color:inherit;}
 }
 .menu-list li:last-child{border-bottom:none;}
 .mi-name{font-size:16px;color:var(--text);}
-.mi-name .hot,.mi-name .thumb{font-style:normal;font-size:14px;}
+.mi-name .hot,.mi-name .thumb{font-style:normal;font-size:14px;display:inline-block;width:1.4em;text-align:center;}
 .mi-prices{display:flex;justify-content:flex-end;gap:8px;}
 .mi-cup,.mi-bottle{
   font-family:var(--serif);font-size:14px;font-weight:700;white-space:nowrap;text-align:center;
@@ -408,6 +408,19 @@ a.rec-card{display:block;color:inherit;}
 .menu-list--dual .mi-bottle{grid-column:2;}
 /* 單一價（僅杯裝）分類：杯標籤固定寬度、靠右對齊 */
 .menu-list:not(.menu-list--dual) .mi-cup{min-width:64px;}
+.mi-name .fixed{font-style:normal;font-size:12px;color:var(--gold);border:1px solid var(--gold-soft);border-radius:12px;padding:1px 8px;margin-left:4px;letter-spacing:1px;white-space:nowrap;}
+
+/* ===== 客製化選項（甜度 / 冰塊）===== */
+.custom-options{padding:56px 40px 60px;background:var(--cream);}
+.co-inner{max-width:1000px;margin:0 auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:26px 32px;}
+.co-title{font-family:var(--serif);font-size:20px;color:var(--green-deep);font-weight:700;letter-spacing:2px;margin-bottom:16px;text-align:center;}
+.co-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:13px 0;border-bottom:1px solid var(--cream-2);}
+.co-row:last-of-type{border-bottom:none;}
+.co-label{flex-shrink:0;font-family:var(--serif);font-weight:700;color:#fff;background:var(--sage);font-size:15px;padding:6px 20px;border-radius:20px;letter-spacing:2px;}
+.co-pills{display:flex;flex-wrap:wrap;gap:9px;}
+.co-pills b{font-family:var(--sans);font-weight:500;font-size:15px;color:var(--green-deep);background:var(--sage-soft);padding:6px 15px;border-radius:16px;}
+.co-note{margin-top:16px;font-size:14px;color:var(--text-soft);line-height:1.8;}
+.co-note b{color:var(--red);font-weight:700;}
 
 /* ===== Menu notes ===== */
 .menu-notes{padding:70px 40px;background:linear-gradient(180deg,var(--cream-2) 0%,var(--sage-soft) 100%);}
